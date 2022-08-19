@@ -15,7 +15,7 @@ This script will search for "data-query-container" attribute in the DOM's elemen
     * "max-width" or "maxw" for comparitions against the width of the element, using the value as maximum to apply the class
     * "min-height" or "minh" for comparitions against the height of the element, using the value as mimimum to apply the class
     * "max-height" or "maxh" for comparitions against the height of the element, using the value as maximum to apply the class
-3. class: Class or classes to apply.
+3. class: Class or classes to apply. The default value is -[ reduced query: minw, maxw, minh, maxh ]-[ value ]
 4. and: Another list of pairs of "value" and "query" as previously noted to delimit the application of the defined class
 
 The classes must be setted as ussual in CSS for this script work properly.
