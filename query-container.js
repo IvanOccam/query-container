@@ -36,7 +36,7 @@ function queryContainerChecker() {
 			element.classList.remove(item.class);
 		}		
 	}
-	document.querySelectorAll("[data-container-query]").forEach(function(element) {
+	document.querySelectorAll("[data-query-container]").forEach(function(element) {
 		checkIndividual(element);
 	});	
 }
