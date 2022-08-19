@@ -24,7 +24,7 @@ IE this is the HTML. Note the div with class "item" and "data-query-container" a
 
     <html>
     <body>
-		    <div class="item" data-query-container="[{'value': 320,'query':'min-width','class':'-smol', 'and': [{'value': 719,'query':'max-width'}]}, {'value': 720}]"></div>
+        <div class="item" data-query-container="[{'value': 320,'query':'min-width','class':'-smol', 'and': [{'value': 719,'query':'max-width'}]}, {'value': 720}]"></div>
         <script type="text/javascript" src="/assets/js/query-container.js"></script>
     </body>
     </html>
