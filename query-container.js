@@ -9,6 +9,22 @@ function queryContainerChecker() {
 		"max-height": "maxh",
 		"maxh": "maxh"
 	}
+	function checkAnd(item, element, width, height) {
+		for (index in item.and) {
+			let i = item.and[index];
+			let dimension = width;
+			if (i.query.endsWith("h")) dimension = height;
+			if (i.query.startsWith("min") && i.value > dimension) {
+				element.classList.remove(item.class);
+				continue;
+			}
+			if (i.query.startsWith("max") && i.value < dimension) {
+				element.classList.remove(item.class);
+				console.log(`${i.value} ${dimension}`);
+				continue;
+			}
+		}
+	}
 	function checkIndividual(element) { // Encapsulation prevents shit from happening
 		let data = JSON.parse(`{'data': ${element.getAttribute("data-query-container")}}`
 		  .replaceAll("'", '"')).data;
@@ -27,12 +43,14 @@ function queryContainerChecker() {
 			if (item.query.endsWith("h")) dimension = height;
 			if (item.query.startsWith("min") && item.value <= dimension) {
 				element.classList.add(item.class);
+				if (item.and) checkAnd(item, element, width, height);
 				continue;
 			}
 			if (item.query.startsWith("max") && item.value >= dimension) {
 				element.classList.add(item.class);
+				if (item.and) checkAnd(item, element, width, height);
 				continue;
-			}			
+			}
 			element.classList.remove(item.class);
 		}		
 	}
