@@ -21,12 +21,13 @@ This script will search for "data-query-container" attribute in the DOM's elemen
 The classes must be setted as ussual in CSS for this script work properly.
 
 IE this is the HTML. Note the div with class "item" and "data-query-container" attribute:
-    <html>
-    <body>
-		    <div class="item" data-query-container="[{'value': 320,'query':'min-width','class':'-smol', 'and': [{'value': 719,'query':'max-width'}]}, {'value': 720}]"></div>
-        <script type="text/javascript" src="/assets/js/query-container.js"></script>
-    </body>
-    </html>
+
+    &lt;html&gt;
+    &lt;body&gt;
+		    &lt;div class="item" data-query-container="[{'value': 320,'query':'min-width','class':'-smol', 'and': [{'value': 719,'query':'max-width'}]}, {'value': 720}]"&gt;&lt;/div&gt;
+        &lt;script type="text/javascript" src="/assets/js/query-container.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
     
 And the CSS:
     
