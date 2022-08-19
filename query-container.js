@@ -59,9 +59,11 @@ function queryContainerChecker() {
 	});	
 }
 
-window.addEventListener("resize", function() {
-	queryContainerChecker();
-});
-window.addEventListener("DOMContentLoaded", function() {
-	queryContainerChecker();	
-});
+function queryContainerListener(eventName) {
+	document.querySelectorAll("[data-query-container]").forEach(function(element) {
+		element.addEventListener(eventName, queryContainerChecker);
+	});
+}
+
+window.addEventListener("resize", queryContainerChecker);
+window.addEventListener("DOMContentLoaded", queryContainerChecker);
