@@ -44,3 +44,15 @@ And the CSS:
     .item.-minw-720 {
       background-color: orange;
     }
+
+## Add-ons
+
+In case the size of the element changes on user interaction you may want to listen another events to change thos classes.
+
+It can be done with "queryContainerListener" javascript function.
+    
+    queryContainerListener([event name]);
+    
+That's all. If you want to listen to clicks in all those containers all you can set is:
+
+    queryContainerListener("click")
