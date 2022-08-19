@@ -10,7 +10,7 @@ function queryContainerChecker() {
 		"maxh": "maxh"
 	}
 	function checkIndividual(element) { // Encapsulation prevents shit from happening
-		let data = JSON.parse(`{'data': ${element.getAttribute("data-container-query")}}`
+		let data = JSON.parse(`{'data': ${element.getAttribute("data-query-container")}}`
 		  .replaceAll("'", '"')).data;
 		let width = element.offsetWidth;
 		let height = element.offsetWidth;
